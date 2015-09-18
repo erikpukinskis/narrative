@@ -3,11 +3,11 @@
 
 A. No modules bigger than 150 lines or so. They should read like a chapter in a book.
 
-B. Instance and development environment are deployed together and dynamically linked to update in real time.
+B. Instance and development environment are deployed together such that running code is updated continuously as you make changes.
 
-C. As much as possible, do everything in one language. JavaScript is nice because both client and server runtimes are widely distributed. Try to gobble stuff like CSS and configuration files and scripting all into JavaScript. The fewer languages people have to learn, the more learners can dive in.
+C. As much as possible, do everything in one language. JavaScript is nice because both client and server runtimes are widely distributed. Try to gobble stuff like CSS and configuration files and scripting all into JavaScript. The fewer languages people have to learn, the more people can dive in.
 
-D. The debugger is sacred. If an abstraction makes the debugger not work well don't use use that abstraction.
+D. The debugger is sacred. If an abstraction makes the debugger not work well don't use use that abstraction. (No ES6, no fibers, no transcompilation)
 
 E. Only move around the minimum possible data. Like, militantly. Like, if you need 43 out of 68 functions from a module, only send those 43 functions to the client. If you only need some names, don't send an array of objects just because you have them lying around.
 
@@ -15,7 +15,7 @@ F. Write programs in the most basic primitives possible. You can do amazing thin
 
 G. Code is programming people too. Reading it should brainwash the reader into making a variation of their own.
 
-H. Make sacrifices in order to get the biggest possible platform coverage with the least amount of code. That usually means using slightly older tools. Don't use ES6 unless you have to, don't use modern web APIs unless you really need them, write performant code that runs on crappy devices.
+H. Make sacrifices in order to get the biggest possible platform coverage with the least amount of code. That usually means using slightly older tools. Don't use modern web APIs unless you really need them. Write performant code that runs on crappy devices.
 
 (Again. Functions and literals can do a lot. Don't move data you don't have to. These things all feed together. To get a broad audience with "modern tools" you need layers of shims, which violates the Minimum Data thing and the Do As Much As You Can In One Language thing. It's not worth it.)
 
@@ -52,6 +52,8 @@ To run that on your computer open up a terminal or a command prompt and type the
     npm install narrative
     node node_modules/narrative/test.js
 
+Note that the editor isn't working yet, which means you don't get B. We're working on it. That's kind of the most important feature, and everything that has been done so far has been in service of getting a simple editor built in an idiomatic (narrative-y) way. Progress is [here](https://github.com/erikpukinskis/nrtv-editor) and various prototypes and sketches are [here](https://github.com/erikpukinskis/prototype-narrative-editor).
+
 ### Why
 
 I am tired of having to keep giant repositories full of side-effects in my head. I want to feel like parts of my codebases are solidifying into high quality stable code, and being serious about boundaries forces me to make that happen.
@@ -73,3 +75,5 @@ I hope Nrtv can be accessible enough to facilitate that.
 *<sup>4</sup> Giant web app router files*
 
 *<sup>5</sup> Filesystems are declarative. Don't use them as a programming language.*
+
+*<sup>6</sup> Promises are declarative. They break D, E, I, and F, and are generally not necessary. It takes time to clarify your concurrency model, and promises, fibers, etc don't really help. They just make it easy to write baffling control flows. Take the time to clarify things and callbacks are almost always plenty powerful enough. Again, functions and literals first.*
