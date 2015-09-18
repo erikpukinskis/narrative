@@ -56,7 +56,15 @@ To run that on your computer open up a terminal or a command prompt and type the
 
 ### Why
 
-Narrative is also a social experiment. Can a fabric of human-readable software provide enough coordination that we could sustain ourselves entirely though voluntary action? Just how many of the ingredients for human sustenance can we pull together without using the threat of violence?
+I am tired of having to keep giant repositories full of side-effects in my head. I want to feel like parts of my codebases are solidifying into high quality stable code, and being serious about boundaries forces me to make that happen.
+
+I am also tired of only being able to talk about my work with computer science professionals. I want to be able to involve more casually interested people, who maybe have an afternoon but not several months to learn a complex development flow.
+
+And I am also kind of sick of feeling like I have some sort of advantage over everyone because I have this arcane skill of programming. I want my code to be facilitating lots of other peoples' cool stuff. I don't want it locked in my proprietary repositories.
+
+And Narrative also is a social experiment. Can a fabric of human-readable software provide enough coordination that we could sustain ourselves entirely though voluntary action? Just how many of the ingredients for human sustenance can we pull together without using the threat of violence?
+
+I hope Narrative can be accessible enough to facilitate that.
 
 *<sup>1</sup> every build system with a massive tree structure of configuration data*
 
