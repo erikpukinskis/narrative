@@ -21,16 +21,6 @@ H. Make sacrifices in order to get the biggest possible platform coverage with t
 
 I. When choosing between declarative *(here is how I want this to fit together, computer please take care of it)* and imperative *(do this, then that)*, lean towards imperative. Declarative code should be reserved for those few times when you really need composition<sup>1</sup>.
 
-*<sup>1</sup> Composition does not mean chaining<sup>2</sup>, or switches<sup>3</sup>, or nesting<sup>4</sup>. Composition, like, projecting data structures onto each other.*
-
-*<sup>2</sup> Every build file with a massive tree of configuration flags*
-
-*<sup>3</sup> Every command line tool ever*
-
-*<sup>4</sup> Giant web app router files*
-
-*<sup>5</sup> Filesystems are declarative. Don't use them as a programming language.*
-
 ### Demo
 
 Nrtv is a Javascript toolkit for writing programs this way. Here's a  simple narrative built with it:
@@ -75,3 +65,13 @@ And I am also kind of sick of feeling like I have some sort of advantage over ev
 And narrative programming also is a social experiment. Can a fabric of human-readable software provide enough coordination that we could sustain ourselves entirely though voluntary action? Just how many of the ingredients for human sustenance can we pull together without using the threat of violence?
 
 I hope Nrtv can be accessible enough to facilitate that.
+
+*<sup>1</sup> Composition does not mean chaining<sup>2</sup>, or switches<sup>3</sup>, or nesting<sup>4</sup>. Composition, like, projecting data structures onto each other.*
+
+*<sup>2</sup> Every build file with a massive tree of configuration flags*
+
+*<sup>3</sup> Every command line tool ever*
+
+*<sup>4</sup> Giant web app router files*
+
+*<sup>5</sup> Filesystems are declarative. Don't use them as a programming language.*
