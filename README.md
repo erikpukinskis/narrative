@@ -30,9 +30,9 @@ var library = require("nrtv-library")(require)
 
 library.using(
   ["nrtv-element", "nrtv-element-server", "nrtv-browser-bridge"],
-  function(element, Server, Bridge) {
+  function(element, server, bridge) {
 
-    var sayWhatsUp = Bridge.defineOnClient(
+    var sayWhatsUp = bridge.browser.define(
       function yo() {
         alert("hey person what's up!")
       }
@@ -41,8 +41,8 @@ library.using(
       onclick: sayWhatsUp.evalable()
     })
 
-    Server.serve(butt)
-    Server.start(7654)
+    server.serve(butt)
+    server.start(7654)
   }
 )
 ```
