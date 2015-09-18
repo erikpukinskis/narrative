@@ -1,5 +1,5 @@
 
-Narrative is a style of programming that arose from a desire to get code out to its widest possible audience.
+**Narrative Programming** is a style of programming that arose from a desire to get code out to its widest possible audience.
 
 A. No modules bigger than 150 lines or so. They should read like a chapter in a book.
 
@@ -17,15 +17,19 @@ G. Code is programming people too. Reading it should brainwash the reader into m
 
 H. Make sacrifices in order to get the biggest possible platform coverage with the least amount of code. That usually means using slightly older tools. Don't use ES6 unless you have to, don't use modern web APIs unless you really need them, write performant code that runs on crappy devices.
 
-(Again. Functions and literals can do a lot. Don't move data you don't have to. These things all feed together. To get a broad audience with "modern tools" you need a layers of shims, which violates the Minimum Data thing and the Do As Much As You Can In One Language thing. It's not worth it.)
+(Again. Functions and literals can do a lot. Don't move data you don't have to. These things all feed together. To get a broad audience with "modern tools" you need layers of shims, which violates the Minimum Data thing and the Do As Much As You Can In One Language thing. It's not worth it.)
 
-I. When choosing between declarative *(here is how I want this to fit together, computer please take care of it)* and imperative *(do this, then that)*, lean towards imperative. Declarative code should be reserved for those few times when you really need composition—not chaining<sup>1</sup>, not switches<sup>2</sup>, not nesting<sup>3</sup>... composition. Filesystems are declarative. Don't use them as a programming language.
+I. When choosing between declarative *(here is how I want this to fit together, computer please take care of it)* and imperative *(do this, then that)*, lean towards imperative. Declarative code should be reserved for those few times when you really need composition<sup>1</sup>.
 
-*<sup>1</sup> every build file with a massive tree of configuration flags*
+*<sup>1</sup> Composition does not mean chaining<sup>2</sup>, or switches<sup>3</sup>, or nesting<sup>4</sup>. Composition, like, projecting data structures onto each other.*
 
-*<sup>2</sup> every command line tool ever*
+*<sup>2</sup> Every build file with a massive tree of configuration flags*
 
-*<sup>3</sup> giant web app router files*
+*<sup>3</sup> Every command line tool ever*
+
+*<sup>4</sup> Giant web app router files*
+
+*<sup>5</sup> Filesystems are declarative. Don't use them as a programming language.*
 
 ### Demo
 
@@ -68,6 +72,6 @@ I am also tired of only being able to talk about my work with computer science p
 
 And I am also kind of sick of feeling like I have some sort of advantage over everyone because I have this arcane skill of programming. I want my code to be facilitating lots of other peoples' cool stuff. I don't want it locked in my proprietary repositories.
 
-And Narrative also is a social experiment. Can a fabric of human-readable software provide enough coordination that we could sustain ourselves entirely though voluntary action? Just how many of the ingredients for human sustenance can we pull together without using the threat of violence?
+And narrative programming also is a social experiment. Can a fabric of human-readable software provide enough coordination that we could sustain ourselves entirely though voluntary action? Just how many of the ingredients for human sustenance can we pull together without using the threat of violence?
 
-I hope Narrative can be accessible enough to facilitate that.
+I hope Nrtv can be accessible enough to facilitate that.
