@@ -47,8 +47,6 @@ library.using(
 )
 ```
 
-The language and syntax will be revised a bit, but those abstractions are pretty close to where they need to be for a 1.0. Of course things will evolve.
-
 To run that on your computer open up a terminal or a command prompt and type the following magical commands:
 
     npm install narrative
