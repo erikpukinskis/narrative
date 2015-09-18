@@ -44,11 +44,11 @@ library.using(
 )
 ```
 
+The language will definitely be revised a bit, but those abstractions are pretty close to where they need to be for 1.0. Of course things will evolve.
+
 To run that on your computer open up a terminal or a command prompt and type the following magical commands:
 
     npm install narrative
-    
-
-The language will definitely be revised a bit, but those abstractions are pretty close to where they need to be for 1.0. Of course things will evolve.
+    node node_modules/narrative/test.js
 
 Narrative is also a social experiment. Could we sustain ourselves entirely though voluntary action? Just how much of the basics of human sustenance can we provide without using the threat of violence?

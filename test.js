@@ -20,6 +20,6 @@ library.using(
 
     Server.start(7654)
 
-    console.log("A narrative is up and running! Visit http://locahost:7654 in your browser to see it!")
+    console.log("A narrative is up and running! Visit http://localhost:7654 in your browser to see it!")
   }
 )
