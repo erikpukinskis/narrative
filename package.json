@@ -1,0 +1,9 @@
+{
+  "name": "narrative",
+  "version": "0.0.0",
+  "description": "Programming for more people",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erikpukinskis/narrative.git"
+  }
+}
