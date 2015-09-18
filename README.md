@@ -21,6 +21,12 @@ H. Make sacrifices in order to get the biggest possible platform coverage with t
 
 I. When choosing between declarative *(here is how I want this to fit together, computer please take care of it)* and imperative *(do this, then that)*, lean towards imperative. Declarative code should be reserved for those few times when you really need composition—not chaining<sup>1</sup>, not switches<sup>2</sup>, not nesting<sup>3</sup>... composition. Filesystems are declarative. Don't use them as a programming language.
 
+*<sup>1</sup> every build file with a massive tree of configuration flags*
+
+*<sup>2</sup> every command line tool ever*
+
+*<sup>3</sup> giant web app router files*
+
 ### Demo
 
 Nrtv is a Javascript toolkit for writing programs this way. Here's a  simple narrative built with it:
@@ -47,7 +53,7 @@ library.using(
 )
 ```
 
-The language and syntax will be revised a bit, but those abstractions are pretty close to where they need to be to get some people coding. Of course things will evolve.
+The language and syntax will be revised a bit, but those abstractions are pretty close to where they need to be for a 1.0. Of course things will evolve.
 
 To run that on your computer open up a terminal or a command prompt and type the following magical commands:
 
@@ -65,9 +71,3 @@ And I am also kind of sick of feeling like I have some sort of advantage over ev
 And Narrative also is a social experiment. Can a fabric of human-readable software provide enough coordination that we could sustain ourselves entirely though voluntary action? Just how many of the ingredients for human sustenance can we pull together without using the threat of violence?
 
 I hope Narrative can be accessible enough to facilitate that.
-
-*<sup>1</sup> every build system with a massive tree structure of configuration data*
-
-*<sup>2</sup> every command line tool ever*
-
-*<sup>3</sup> giant web app router files*
