@@ -5,15 +5,15 @@ A. No modules bigger than 150 lines or so. They should read like a chapter in a 
 
 B. Instance and development environment are deployed together and dynamically linked to update in real time.
 
-C. Code is programming people too. Reading it should brainwash the reader into making a variation of their own.
+C. As much as possible, do everything in one language. JavaScript is nice because both client and server runtimes are widely distributed. Try to gobble stuff like CSS and configuration files and scripting all into JavaScript. The fewer languages people have to learn, the more learners can dive in.
 
 D. The debugger is sacred. If an abstraction makes the debugger not work well don't use use that abstraction.
 
 E. Only move around the minimum possible data. Like, militantly. Like, if you need 43 out of 68 functions from a module, only send those 43 functions to the client. If you only need some names, don't send an array of objects just because you have them lying around.
 
-F. As much as possible, do everything in one language. JavaScript is nice because both client and server runtimes are widely distributed. Try to gobble stuff like CSS and configuration files and scripting all into JavaScript. The fewer languages people have to learn, the more learners can dive in.
+F. Write programs in the most basic primitives possible. You can do amazing things with just functions and literals.
 
-G. Write programs in the most basic primitives possible. You can do amazing things with just functions and literals.
+G. Code is programming people too. Reading it should brainwash the reader into making a variation of their own.
 
 H. Make sacrifices in order to get the biggest possible platform coverage with the least amount of code. That usually means using slightly older tools. Don't use ES6 unless you have to, don't use modern web APIs unless you really need them, write performant code that runs on crappy devices.
 
