@@ -26,15 +26,29 @@ I guess this should be a demo of the simplest most narrativey thing that I can t
 var library = require("nrtv-library")(require)
 
 library.using(
-  ["nrtv-element", "nrtv-element-server"],
-  function(element, Server) {
+  ["nrtv-element", "nrtv-element-server", "nrtv-browser-bridge"],
+  function(element, Server, Bridge) {
+
+    var sayWhatsUp = Bridge.defineOnClient(
+      function yo() {
+        alert("hey person what's up!")
+      }
+    )
     var butt = element("button", {
-      onclick: ...
+      onclick: sayWhatsUp.evalable()
     })
+
     Server.serve(butt)
     Server.start(7654)
   }
 )
 ```
+
+To run that on your computer open up a terminal or a command prompt and type the following magical commands:
+
+    npm install narrative
+    
+
+The language will definitely be revised a bit, but those abstractions are pretty close to where they need to be for 1.0. Of course things will evolve.
 
 Narrative is also a social experiment. Could we sustain ourselves entirely though voluntary action? Just how much of the basics of human sustenance can we provide without using the threat of violence?

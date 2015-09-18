@@ -2,6 +2,18 @@
   "name": "narrative",
   "version": "0.1.0",
   "description": "Programming for more people",
+  "dependencies": {
+    "nrtv-library": "*",
+    "nrtv-element": "*",
+    "nrtv-element-server": "*",
+    "nrtv-browser-bridge": "*"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "bin": {
+    "narrative": "node test.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/erikpukinskis/narrative.git"
