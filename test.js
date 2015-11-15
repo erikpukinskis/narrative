@@ -6,7 +6,7 @@ library.using(
   ["nrtv-element", "nrtv-element-server", "nrtv-browser-bridge"],
   function(element, server, bridge) {
 
-    var sayWhatsUp = bridge.browser.define(
+    var sayWhatsUp = bridge.defineFunction(
       function yo() {
         alert("hey person what's up!")
       }
