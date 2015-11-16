@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 var library = require("nrtv-library")(require)
 
 library.using(
