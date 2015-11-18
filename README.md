@@ -13,13 +13,11 @@ E. Only move around the minimum possible data. Like, militantly. Like, if you ne
 
 F. Write programs in the most basic primitives possible. You can do amazing things with just functions and literals.
 
-G. Code is programming people too. Reading it should brainwash the reader into making a variation of their own.
-
-H. Make sacrifices in order to get the biggest possible platform coverage with the least amount of code. That usually means using slightly older tools. Don't use modern web APIs unless you really need them. Write performant code that runs on crappy devices.
+G. Make sacrifices in order to get the biggest possible platform coverage with the least amount of code. That usually means using slightly older tools. Don't use modern web APIs unless you really need them. Write performant code that runs on crappy devices.
 
 (Again. Functions and literals can do a lot. Don't move data you don't have to. These things all feed together. To get a broad audience with "modern tools" you need layers of shims, which violates the Minimum Data thing and the Do As Much As You Can In One Language thing. It's not worth it.)
 
-I. When choosing between declarative *(here is how I want this to fit together, computer please take care of it)* and imperative *(do this, then that)*, lean towards imperative. Declarative code should be reserved for those few times when you really need composition<sup>1</sup>.
+H. When choosing between declarative *(here is how I want this to fit together, computer please take care of it)* and imperative *(do this, then that)*, lean towards imperative. Declarative code should be reserved for those few times when you really need composition<sup>1</sup>.
 
 ### Demo
 
