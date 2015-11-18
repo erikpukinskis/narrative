@@ -48,7 +48,7 @@ library.using(
 To run that on your computer open up a terminal or a command prompt and type the following magical commands:
 
     npm install narrative
-    node node_modules/narrative/test.js
+    node node_modules/narrative/test
 
 Note that the editor isn't working yet, which means you don't get B. We're working on it. That's kind of the most important feature, and everything that has been done so far has been in service of getting a simple editor built in an idiomatic (narrative-y) way. Progress is [here](https://github.com/erikpukinskis/nrtv-editor) and various prototypes and sketches are [here](https://github.com/erikpukinskis/prototype-narrative-editor).
 
