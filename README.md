@@ -5,7 +5,7 @@ A. No modules bigger than 150 lines or so. They should read like a chapter in a 
 
 B. Instance and development environment are deployed together such that running code is updated continuously as you make changes.
 
-C. As much as possible, do everything in one language. JavaScript is nice because both client and server runtimes are widely distributed. Try to gobble stuff like CSS and configuration files and scripting all into JavaScript. The fewer languages people have to learn, the more people can dive in.
+C. As much as possible, do everything in one language. JavaScript is nice because both client and server runtimes are widely distributed. Try to gobble stuff like CSS and configuration files and scripting all into JavaScript, inside modules. The fewer languages people have to learn, the more people can dive in.
 
 D. The debugger is sacred. If an abstraction makes the debugger not work well don't use use that abstraction. (No ES6, no fibers, no transcompilation)
 
