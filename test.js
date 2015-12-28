@@ -1,7 +1,7 @@
 var library = require("nrtv-library")(require)
 
 library.using(
-  ["nrtv-element", "nrtv-element-server", "nrtv-browser-bridge"],
+  ["nrtv-element", "nrtv-server", "nrtv-browser-bridge"],
   function(element, server, bridge) {
 
     var sayWhatsUp = bridge.defineFunction(
@@ -16,7 +16,11 @@ library.using(
       "Press me"
     )
 
-    server.serve(butt)
+    server.addRoute(
+      "get",
+      "/",
+      bridge.sendPage(butt)
+    )
 
     server.start(7654)
 

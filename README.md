@@ -19,6 +19,8 @@ G. Make sacrifices in order to get the biggest possible platform coverage with t
 
 H. When choosing between declarative *(here is how I want this to fit together, computer please take care of it)* and imperative *(do this, then that)*, lean towards imperative. Declarative code should be reserved for those few times when you really need composition<sup>1</sup>.
 
+J. Strive for all code to be alive or dead. Kill zombie code! Aggressively use scripting and moderation to find code that should be replaced with new standards and do it. Your inbox should be full of "so-and-so fixed this for you. apply changes?" messages. Even if the number of applications grows exponentially the total number of infrastructure modules on the planet should still only be growing linearly.
+
 ### Demo
 
 Nrtv is a Javascript toolkit for writing programs this way. Here's a  simple narrative built with it:
@@ -27,7 +29,7 @@ Nrtv is a Javascript toolkit for writing programs this way. Here's a  simple nar
 var library = require("nrtv-library")(require)
 
 library.using(
-  ["nrtv-element", "nrtv-element-server", "nrtv-browser-bridge"],
+  ["nrtv-element", "nrtv-server", "nrtv-browser-bridge"],
   function(element, server, bridge) {
 
     var sayWhatsUp = bridge.defineFunction(
@@ -35,11 +37,19 @@ library.using(
         alert("hey person what's up!")
       }
     )
-    var butt = element("button", {
-      onclick: sayWhatsUp.evalable()
-    })
 
-    server.serve(butt)
+    var butt = element(
+      "button",
+      {onclick: sayWhatsUp.evalable()},
+      "Press me"
+    )
+
+    server.addRoute(
+      "get",
+      "/",
+      bridge.sendPage(butt)
+    )
+
     server.start(7654)
   }
 )
