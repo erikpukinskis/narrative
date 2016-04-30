@@ -85,3 +85,21 @@ I hope Nrtv can be accessible enough to facilitate that.
 *<sup>5</sup> Filesystems are declarative. Don't use them as a programming language.*
 
 *<sup>6</sup> Promises are declarative. They break D, E, I, and F, and are generally not necessary. It takes time to clarify your concurrency model, and promises, fibers, etc don't really help. They just make it easy to write baffling control flows. Take the time to clarify things and callbacks are almost always plenty powerful enough. Again, functions and literals first.*
+
+
+
+Possible Beta function set
+
+    add-html
+    bar-code
+    bridge-route
+    browser-bridge
+    draw-scene
+    element
+    function-call
+    make-it-editable
+    make-request
+
+
+
+
