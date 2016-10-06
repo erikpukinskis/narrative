@@ -4,9 +4,9 @@
   "description": "Programming for more people",
   "dependencies": {
     "nrtv-library": "*",
-    "nrtv-element": "*",
+    "web-element": "*",
     "nrtv-server": "*",
-    "nrtv-browser-bridge": "*"
+    "browser-bridge": "*"
   },
   "scripts": {
     "test": "node test.js"

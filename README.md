@@ -29,7 +29,7 @@ Nrtv is a Javascript toolkit for writing programs this way. Here's a  simple nar
 var library = require("nrtv-library")(require)
 
 library.using(
-  ["nrtv-element", "nrtv-server", "nrtv-browser-bridge"],
+  ["web-element", "nrtv-server", "browser-bridge"],
   function(element, server, bridge) {
 
     var sayWhatsUp = bridge.defineFunction(
@@ -88,17 +88,20 @@ I hope Nrtv can be accessible enough to facilitate that.
 
 
 
-Possible Beta function set
+Beta Functions:
+
+    web-element
+    function-call
+    browser-bridge
+    make-it-editable
+    draw-scene
+    make-request
+
+Possible:
 
     add-html
     bar-code
     bridge-route
-    browser-bridge
-    draw-scene
-    element
-    function-call
-    make-it-editable
-    make-request
 
 
 
