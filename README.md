@@ -88,21 +88,29 @@ I hope Nrtv can be accessible enough to facilitate that.
 
 
 
-Beta Functions:
+Beta modules (12):
 
+    module-library
     web-element
-    function-call
+    web-site
     browser-bridge
     make-it-editable
-    draw-scene
     make-request
+    bridge-module
+    single-use-socket
+    browser-socket
+    run-test
+    draw-scene
 
-Possible:
 
+Behind the scenes (10):
+
+    function-call
     add-html
-    bar-code
-    bridge-route
-
-
-
-
+    browsing-minion
+    string-tree
+    wait-for-stuff
+    proxy-requests
+    dispatch-tasks
+    guarantor
+    edit-code
