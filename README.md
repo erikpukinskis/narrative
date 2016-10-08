@@ -13,13 +13,10 @@ E. Only move around the minimum possible data. Like, militantly. Like, if you ne
 
 F. Write programs in the most basic primitives possible. You can do amazing things with just functions and literals.
 
-G. Make sacrifices in order to get the biggest possible platform coverage with the least amount of code. That usually means using slightly older tools. Don't use modern web APIs unless you really need them. Write performant code that runs on crappy devices.
-
-(Again. Functions and literals can do a lot. Don't move data you don't have to. These things all feed together. To get a broad audience with "modern tools" you need layers of shims, which violates the Minimum Data thing and the Do As Much As You Can In One Language thing. It's not worth it.)
+G. Variables should describe what they are. Functions should describe what they do. If you need a comment to do either of those things, or to disambiguate names, change the name to be more self explanatory and less ambiguous. Better to say parentExpressionId than to say parent and have to wonder what the type is and whether it's an id or an object. Try to do as much as possible in using names that are meaningful to the module's human users.
 
 H. When choosing between declarative *(here is how I want this to fit together, computer please take care of it)* and imperative *(do this, then that)*, lean towards imperative. Declarative code should be reserved for those few times when you really need composition<sup>1</sup>.
 
-J. Strive for all code to be alive or dead. Kill zombie code! Aggressively use scripting and moderation to find code that should be replaced with new standards and do it. Your inbox should be full of "so-and-so fixed this for you. apply changes?" messages. Even if the number of applications grows exponentially the total number of infrastructure modules on the planet should still only be growing linearly.
 
 ### Demo
 
