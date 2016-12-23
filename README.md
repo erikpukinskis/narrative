@@ -22,7 +22,7 @@ H. When choosing between declarative *(here is how I want this to fit together, 
 
 Nrtv is a Javascript toolkit for writing programs this way. Here's a  simple narrative built with it:
 
-```Javascript
+```javascript
 var library = require("module-library")(require)
 
 library.using(
