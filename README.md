@@ -18,48 +18,52 @@ G. Variables should describe what they are. Functions should describe what they 
 H. When choosing between declarative *(here is how I want this to fit together, computer please take care of it)* and imperative *(do this, then that)*, lean towards imperative. Declarative code should be reserved for those few times when you really need composition<sup>1</sup>.
 
 
-### Demo
+## Demo
 
 Nrtv is a Javascript toolkit for writing programs this way. Here's a  simple narrative built with it:
 
 ```Javascript
-var library = require("nrtv-library")(require)
+var library = require("module-library")(require)
 
 library.using(
-  ["web-element", "nrtv-server", "browser-bridge"],
-  function(element, server, bridge) {
+  ["web-element", "web-site", "browser-bridge"],
+  function(element, site, BrowserBridge) {
 
-    var sayWhatsUp = bridge.defineFunction(
-      function yo() {
-        alert("hey person what's up!")
+    var bridge = new BrowserBridge()
+
+    var greet = bridge.defineFunction(
+      function greet(name) {
+        alert("hi, "+name)
       }
     )
 
-    var butt = element(
+    var button = element(
       "button",
-      {onclick: sayWhatsUp.evalable()},
-      "Press me"
+      "Hi there", 
+      {onclick: greet.withArgs("Tam").evalable()}
     )
 
-    server.addRoute(
+    bridge.asap(function() {
+      console.log("Everything is awesome")
+    })
+
+    site.addRoute(
       "get",
       "/",
-      bridge.sendPage(butt)
+      bridge.requestHandler(button)
     )
 
-    server.start(7654)
+    site.start(7654)
   }
 )
 ```
 
-To run that on your computer open up a terminal or a command prompt and type the following magical commands:
+To try it on your computer open up a terminal or a command prompt and type the following magical commands:
 
     npm install narrative
-    node node_modules/narrative/test
+    node node_modules/narrative/demo
 
-Note that the editor isn't working yet, which means you don't get B. We're working on it. That's kind of the most important feature, and everything that has been done so far has been in service of getting a simple editor built in an idiomatic (narrative-y) way. Progress is [here](https://github.com/erikpukinskis/nrtv-editor) and various prototypes and sketches are [here](https://github.com/erikpukinskis/prototype-narrative-editor).
-
-### Why
+## Why
 
 I am tired of having to keep giant repositories full of side-effects in my head. I want to feel like parts of my codebases are solidifying into high quality stable code, and being serious about boundaries forces me to make that happen.
 
@@ -84,30 +88,14 @@ I hope Nrtv can be accessible enough to facilitate that.
 *<sup>6</sup> Promises are declarative. They break D, E, I, and F, and are generally not necessary. It takes time to clarify your concurrency model, and promises, fibers, etc don't really help. They just make it easy to write baffling control flows. Take the time to clarify things and callbacks are almost always plenty powerful enough. Again, functions and literals first.*
 
 
-
-Beta modules (12):
+## Core modules
 
     module-library
     web-element
     web-site
     browser-bridge
-    make-it-editable
     make-request
-    bridge-module
-    single-use-socket
-    browser-socket
     run-test
-    draw-scene
-
-
-Behind the scenes (10):
-
     function-call
     add-html
-    browsing-minion
-    string-tree
-    wait-for-stuff
-    proxy-requests
-    dispatch-tasks
-    guarantor
-    edit-code
+    basic-styles
