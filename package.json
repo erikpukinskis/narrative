@@ -4,16 +4,13 @@
   "description": "Programming for more people",
   "main": "narrative.js",
   "dependencies": {
+    "browser-bridge": "*",
     "module-library": "*",
     "web-element": "*",
-    "web-site": "*",
-    "browser-bridge": "*"
+    "web-site": "*"
   },
   "devDependencies": {
     "run-test": "*"
-  },
-  "scripts": {
-    "test": "node test.js"
   },
   "scripts": {
     "test": "node test.js"
