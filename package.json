@@ -5,12 +5,15 @@
   "main": "narrative.js",
   "dependencies": {
     "module-library": "*",
-    "web-site": "*",
-    "browser-bridge": "*",
-    "web-element": "*"
+    "web-host": "*",
+    "web-element": "*",
+    "basic-styles": "*"
   },
   "devDependencies": {
-    "run-test": "*"
+    "run-test": "*",
+    "web-site": "*",
+    "browser-bridge": "*",
+    "identifiable": "*"
   },
   "scripts": {
     "test": "node test.js"

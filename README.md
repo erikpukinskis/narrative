@@ -99,3 +99,4 @@ I hope Nrtv can be accessible enough to facilitate that.
     function-call
     add-html
     basic-styles
+    web-host
