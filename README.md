@@ -15,12 +15,30 @@ F. Write programs in the most basic primitives possible. You can do amazing thin
 
 G. Variables should describe what they are. Functions should describe what they do. If you need a comment to do either of those things, or to disambiguate names, change the name to be more self explanatory and less ambiguous. Better to say parentExpressionId than to say parent and have to wonder what the type is and whether it's an id or an object. Try to do as much as possible in using names that are meaningful to the module's human users.
 
-H. When choosing between declarative *(here is how I want this to fit together, computer please take care of it)* and imperative *(do this, then that)*, lean towards imperative. Declarative code should be reserved for those few times when you really need composition<sup>1</sup>.
+H. When choosing between declarative *(here is how I want this to fit together, computer please take care of it<sup>6</sup>)* and imperative *(do this, then that)*, lean towards imperative. Declarative code should be reserved for those few times when you really need composition<sup>1</sup>.
 
+
+## Available tools
+
+A handful of modules have been written that help write narrative web applications. These are JavaScript modules but they can easily be ported to any language:
+
+* *browser-bridge* lets you pass data and functions down to the client
+
+* *web-site* is more or less a wrapper around express 
+
+* *web-element* helps you generate HTML
+
+* *add-html*, mostly used in the browser, lets you add HTML in and around existing DOM nodes
+
+* *module-library* and *bridge-module* let you declare small modules and their dependencies for easy transport to the browser.
+
+There are more libraries, but none are required.
+
+An API service might just use web-site. An HTML widget might only need module-library, web-element, and add-html. A photo uploading component might use web-element, web-site, bridge-module, and browser-bridge. Your application might use none of those directly, cobbling together *other* components that depend on them.
 
 ## Demo
 
-Nrtv is a Javascript toolkit for writing programs this way. Here's a  simple narrative built with it:
+Here's a basic web site with a little client-side code:
 
 ```javascript
 var library = require("module-library")(require)
@@ -95,8 +113,8 @@ I hope Nrtv can be accessible enough to facilitate that.
     web-site
     browser-bridge
     make-request
+    bridge-module
     run-test
     function-call
     add-html
     basic-styles
-    web-host
