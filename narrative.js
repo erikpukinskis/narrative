@@ -10,8 +10,8 @@ exec(
     if (error) {
       return console.log(error)
     }
-    var moduleName = process.argv[1]
-    var description = process.argv[2]
+    var moduleName = process.argv[2]
+    var description = process.argv[3]
     var author = stdout.replace(/\s/, "").toLowerCase()
 
     writeProject(moduleName, description, author)
@@ -56,13 +56,15 @@ function writeProject(name, description, author) {
     "",
   ].join("\n")
 
+  var dir = process.cwd()
+
   fs.writeFile(
-    path.resolve(__dirname, name+".js"),
+    path.resolve(dir, name+".js"),
     source,
     report.bind(null, "wrote "+name+".js"))
 
   fs.writeFile(
-    path.resolve(__dirname, "package.json"),
+    path.resolve(dir, "package.json"),
     JSON.stringify(
       packageJson,
       null,
@@ -70,7 +72,7 @@ function writeProject(name, description, author) {
     report.bind(null, "wrote package.json"))
 
   fs.writeFile(
-    path.resolve(__dirname, ".gitignore"),
+    path.resolve(dir, ".gitignore"),
     "node_modules\n",
     report.bind(null, "wrote .gitignore"))
 }
