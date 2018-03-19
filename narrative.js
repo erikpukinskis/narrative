@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
-var fs = require('fs')
-var exec = require('child_process').exec
+var fs = require("fs")
+var exec = require("child_process").exec
+var path = require("path")
 
 exec(
   "git config --global user.name",
@@ -56,12 +57,12 @@ function writeProject(name, description, author) {
   ].join("\n")
 
   fs.writeFile(
-    name+".js",
+    path.resolve(__dirname, name+".js"),
     source,
     report.bind(null, "wrote "+name+".js"))
 
   fs.writeFile(
-    "package.json",
+    path.resolve(__dirname, "package.json"),
     JSON.stringify(
       packageJson,
       null,
@@ -69,7 +70,7 @@ function writeProject(name, description, author) {
     report.bind(null, "wrote package.json"))
 
   fs.writeFile(
-    ".gitignore",
+    path.resolve(__dirname, ".gitignore"),
     "node_modules\n",
     report.bind(null, "wrote .gitignore"))
 }
