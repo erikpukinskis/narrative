@@ -2,7 +2,7 @@
   "name": "narrative",
   "version": "0.15.0",
   "description": "Programming for more people",
-  "main": "narrative.js",
+  "bin": "narrative.js",
   "dependencies": {
     "module-library": "*",
     "web-host": "*",
