@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var fs = require('fs')
 var exec = require('child_process').exec
 
@@ -7,8 +9,8 @@ exec(
     if (error) {
       return console.log(error)
     }
-    var moduleName = process.argv[2]
-    var description = process.argv[3]
+    var moduleName = process.argv[1]
+    var description = process.argv[2]
     var author = stdout.replace(/\s/, "").toLowerCase()
 
     writeProject(moduleName, description, author)
