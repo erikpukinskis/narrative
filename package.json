@@ -1,6 +1,6 @@
 {
   "name": "narrative",
-  "version": "0.19.0",
+  "version": "0.20.0",
   "description": "Programming for more people",
   "bin": "narrative.js",
   "dependencies": {
