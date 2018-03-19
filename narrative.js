@@ -48,7 +48,6 @@ function writeProject(name, description, author) {
     "  \""+name+"\",",
     "  function() {",
     "    function "+camel+"() {",
-    "",
     "    }",
     "    return "+camel,
     "  }",
@@ -57,6 +56,9 @@ function writeProject(name, description, author) {
   ].join("\n")
 
   var dir = process.cwd()
+
+  var writeCount = 0
+  var errorCount = 0
 
   fs.writeFile(
     path.resolve(dir, name+".js"),
@@ -75,8 +77,17 @@ function writeProject(name, description, author) {
     path.resolve(dir, ".gitignore"),
     "node_modules\n",
     report.bind(null, "wrote .gitignore"))
-}
 
-function report(message, error) {
-  console.log(error || message)
+  function report(message, error) {
+    if (error) {
+      errorCount++
+      console.log(error)
+    } else {
+      writeCount++
+      console.log(message)
+    }
+    if (writeCount == 3 && errorCount == 0) {
+       exec("npm install; node .").stdout.pipe(process.stdout)
+    }
+  }
 }
