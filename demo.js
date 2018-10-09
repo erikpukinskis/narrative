@@ -4,36 +4,29 @@ var library = require("module-library")(require)
 // THERE IS NOTHING WRONG WITH PROGRAMMING. WE ARE JUST NOT WRITING PROGRAMS THAT BEGINNERS CAN USE.
 
 
-library.using(
-  ["web-element", "web-site", "browser-bridge"],
-  function(element, site, BrowserBridge) {
+library.using([
+  "web-site",
+  "browser-bridge",
+  "web-element",
+  "basic-styles"],
+  function (WebSite, BrowserBridge, element, basicStyles) {
+    var site = new WebSite()
+    var baseBridge = new BrowserBridge()
+    basicStyles.addTo(baseBridge)
 
-    var bridge = new BrowserBridge()
-
-    var greet = bridge.defineFunction(
-      function greet(name) {
-        alert("hi, "+name)
-      }
-    )
+    var press = baseBridge.defineFunction(
+      function press() {})
 
     var button = element(
       "button",
-      "Hi there", 
-      {onclick: greet.withArgs("Tam").evalable()}
-    )
-
-    bridge.asap(function() {
-      console.log("Everything is awesome")
-    })
+      "Press me",{
+      "onclick": press.evalable()})
 
     site.addRoute(
       "get",
       "/",
-      bridge.requestHandler(button)
-    )
+      baseBridge.requestHandler(button))
 
-    site.start(7654)
+    site.start(2043)
+  })
 
-    console.log("A narrative is up and running! Visit http://localhost:7654 in your browser to see it!")
-  }
-)

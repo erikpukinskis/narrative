@@ -5,14 +5,13 @@
   "bin": "narrative.js",
   "dependencies": {
     "module-library": "*",
-    "web-host": "*",
+    "web-site": "*",
+    "browser-bridge": "*",
     "web-element": "*",
     "basic-styles": "*"
   },
   "devDependencies": {
     "run-test": "*",
-    "web-site": "*",
-    "browser-bridge": "*",
     "identifiable": "*"
   },
   "scripts": {
